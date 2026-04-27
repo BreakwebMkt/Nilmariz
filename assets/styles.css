@@ -1084,8 +1084,8 @@ svg.icon {
 }
 
 svg.icon-whatsapp {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   display: block;
   position: relative;
   z-index: 1;
@@ -1097,8 +1097,8 @@ svg.icon-whatsapp {
 }
 
 .footer-contact .icon-whatsapp {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   margin: 0;
 }
 
