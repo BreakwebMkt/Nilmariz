@@ -408,6 +408,18 @@ a {
   color: var(--energy-foreground);
 }
 
+.floating-icon svg,
+.icon-badge svg,
+.reason-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .floating-title {
   color: var(--foreground);
   font-weight: 700;
@@ -841,6 +853,12 @@ a {
   gap: 1rem;
 }
 
+.services-maint-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.4rem;
+}
+
 .contact-card {
   padding: 1.25rem;
   transition: 0.2s ease;
@@ -962,9 +980,15 @@ a {
 .footer-contact li {
   display: flex;
   gap: 0.5rem;
-  align-items: start;
+  align-items: center;
   color: rgba(252, 252, 253, 0.85);
   font-size: 0.9rem;
+}
+
+.footer-contact li svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
 }
 
 .footer-title {
@@ -1089,7 +1113,8 @@ svg.icon-whatsapp {
   .power-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-maint-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -1100,6 +1125,7 @@ svg.icon-whatsapp {
   .section-head { flex-direction: column; align-items: start; }
   .check-list.grid { grid-template-columns: 1fr; }
   .grid-4, .grid-3, .grid-2, .power-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
   .cta-banner .container { flex-direction: column; align-items: flex-start; }
   .footer-bottom { flex-direction: column; }
 }
