@@ -350,7 +350,7 @@ a {
   padding-top: 1.4rem;
   border-top: 1px solid rgba(252, 252, 253, 0.24);
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -1093,7 +1093,10 @@ svg.icon-whatsapp {
 }
 
 .fab .icon-whatsapp {
+  width: 27px;
+  height: 27px;
   margin: 0 auto;
+  transform: translateY(0.5px);
 }
 
 .footer-contact .icon-whatsapp {

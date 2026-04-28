@@ -124,8 +124,8 @@ function renderFooter() {
         </div>
       </div>
       <div class="container footer-bottom">
-        <span>© ${new Date().getFullYear()} Nilmariz Geradores. Todos os direitos reservados.</span>
-        <span>Venda · Instalacao · Manutencao · Plantao 24h</span>
+        <span>&copy; ${new Date().getFullYear()} Nilmariz Geradores. Todos os direitos reservados.</span>
+        <span>Venda - Instalacao - Manutencao - Plantao 24h</span>
       </div>
     </footer>
   `;
