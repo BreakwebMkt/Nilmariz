@@ -1150,4 +1150,6 @@ svg.icon-whatsapp {
   .contact-grid { grid-template-columns: 1fr; }
   .cta-banner .container { flex-direction: column; align-items: flex-start; }
   .footer-bottom { flex-direction: column; }
+  .media-card { min-height: 0; }
+  .media-card img { height: auto; display: block; }
 }
