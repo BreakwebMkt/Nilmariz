@@ -135,6 +135,14 @@ function renderFab() {
   return `<a class="fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><span class="fab-icon">${icon("whatsapp")}</span></a>`;
 }
 
+function enhanceWhatsappButtons() {
+  const whatsappButtons = document.querySelectorAll('a.btn[href*="wa.me/"]:not(.fab)');
+  whatsappButtons.forEach((button) => {
+    if (button.querySelector(".icon-whatsapp")) return;
+    button.insertAdjacentHTML("afterbegin", icon("whatsapp"));
+  });
+}
+
 function mountLayout() {
   const page = document.body.getAttribute("data-page");
   const headerSlot = document.querySelector("[data-header]");
@@ -142,6 +150,7 @@ function mountLayout() {
   if (headerSlot) headerSlot.innerHTML = renderHeader(page);
   if (footerSlot) footerSlot.innerHTML = renderFooter();
   document.body.insertAdjacentHTML("beforeend", renderFab());
+  enhanceWhatsappButtons();
 
   const toggle = document.getElementById("mobile-toggle");
   const mobileNav = document.getElementById("mobile-nav");
