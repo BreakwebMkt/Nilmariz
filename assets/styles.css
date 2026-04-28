@@ -557,12 +557,28 @@ a {
   align-items: center;
 }
 
+.split-top {
+  align-items: start;
+}
+
 .media-card {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
   border: 1px solid var(--border);
   min-height: 450px;
+}
+
+.media-card-install {
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.media-card-install img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .badge-overlay {
@@ -1114,6 +1130,18 @@ svg.icon-whatsapp {
   width: 16px;
   height: 16px;
   margin: 0;
+}
+
+.contact-card .icon-box .icon-whatsapp {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-card .icon-box .icon-whatsapp-solid {
+  width: 17px;
+  height: 17px;
+  display: block;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {
