@@ -153,32 +153,14 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
-.logo-box {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  background: var(--gradient-hero);
-  color: var(--energy);
-  box-shadow: var(--shadow-card);
-}
-
-.brand strong {
-  color: var(--primary);
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.15rem;
-}
-
-.brand small {
+.brand-logo {
+  width: auto;
+  height: 60px;
   display: block;
-  color: var(--muted-foreground);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.58rem;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -541,6 +523,40 @@ a {
   margin: 0.58rem 0 0.8rem;
   color: var(--muted-foreground);
   font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.showcase-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.showcase-card {
+  overflow: hidden;
+}
+
+.showcase-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.showcase-copy {
+  padding: 1rem;
+}
+
+.showcase-copy h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.showcase-copy p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 0.88rem;
   line-height: 1.5;
 }
 
@@ -975,30 +991,14 @@ a {
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
-.footer-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: var(--energy);
-  color: var(--energy-foreground);
-  display: grid;
-  place-items: center;
-}
-
-.footer-brand strong {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.25rem;
-}
-
-.footer-brand small {
-  display: inline-block;
-  margin-left: 0.22rem;
-  font-size: 0.62rem;
-  opacity: 0.72;
-  letter-spacing: 0.14em;
+.footer-logo-image {
+  width: auto;
+  max-width: min(100%, 240px);
+  height: 84px;
+  display: block;
+  object-fit: contain;
 }
 
 .footer-intro {
@@ -1177,6 +1177,7 @@ svg.icon-whatsapp {
   .power-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-maint-grid { grid-template-columns: 1fr; }
 }
@@ -1188,10 +1189,12 @@ svg.icon-whatsapp {
   .hero-grid { padding: 4.4rem 0; }
   .section-head { flex-direction: column; align-items: start; }
   .check-list.grid { grid-template-columns: 1fr; }
-  .grid-4, .grid-3, .grid-2, .power-grid { grid-template-columns: 1fr; }
+  .grid-4, .grid-3, .grid-2, .power-grid, .showcase-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .cta-banner .container { flex-direction: column; align-items: flex-start; }
   .footer-bottom { flex-direction: column; }
   .media-card { min-height: 0; }
   .media-card img { height: 100%; display: block; }
+  .brand-logo { height: 48px; }
+  .footer-logo-image { height: 70px; }
 }

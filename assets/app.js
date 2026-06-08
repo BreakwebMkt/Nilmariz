@@ -56,6 +56,7 @@ const NAV = [
 function renderHeader(currentPage) {
   const navDesktop = NAV.map((item) => `<a href="${item.href}" class="${item.page === currentPage ? "active" : ""}">${item.label}</a>`).join("");
   const navMobile = NAV.map((item) => `<a href="${item.href}">${item.label}</a>`).join("");
+  const logoImage = '<img src="assets/images/logo-nilmariz.webp" alt="Nilmariz Geradores" class="brand-logo">';
 
   return `
     <div class="header-top">
@@ -72,8 +73,7 @@ function renderHeader(currentPage) {
     <header class="site-header">
       <div class="container bar">
         <a class="brand" href="index.html">
-          <span class="logo-box">${icon("zap")}</span>
-          <span><strong>Nilmariz</strong><small>Geradores</small></span>
+          ${logoImage}
         </a>
         <nav class="nav-links">${navDesktop}</nav>
         <div class="header-actions">
@@ -90,13 +90,13 @@ function renderHeader(currentPage) {
 }
 
 function renderFooter() {
+  const logoImage = '<img src="assets/images/logo-nilmariz.webp" alt="Nilmariz Geradores" class="footer-logo-image">';
   return `
     <footer class="site-footer">
       <div class="container footer-main">
         <div>
           <div class="footer-brand">
-            <span class="footer-logo">${icon("zap")}</span>
-            <span><strong>Nilmariz</strong><small>GERADORES DE ENERGIA</small></span>
+            ${logoImage}
           </div>
           <p class="footer-intro">Energia para as coisas que movem sua vida. Mais de duas decadas em solucoes completas de geracao de energia para industria, comercio, hospitais, data centers e residencias de alto padrao.</p>
           <ul class="footer-contact">
