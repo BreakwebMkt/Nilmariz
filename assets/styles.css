@@ -366,6 +366,17 @@ a {
   object-fit: cover;
 }
 
+.hero-image-card-focus img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-image-card-focus {
+  min-height: 0;
+  aspect-ratio: 3 / 2;
+  align-self: center;
+}
+
 .floating-card {
   position: absolute;
   left: 1rem;
@@ -606,6 +617,19 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.media-card-why {
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+}
+
+.media-card-why img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1169,6 +1193,9 @@ svg.icon-whatsapp {
   .hero-image-card {
     min-height: 340px;
   }
+  .hero-image-card-focus {
+    aspect-ratio: 16 / 11;
+  }
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1195,6 +1222,9 @@ svg.icon-whatsapp {
   .footer-bottom { flex-direction: column; }
   .media-card { min-height: 0; }
   .media-card img { height: 100%; display: block; }
+  .hero-image-card-focus {
+    aspect-ratio: 4 / 3;
+  }
   .brand-logo { height: 48px; }
   .footer-logo-image { height: 70px; }
 }

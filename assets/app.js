@@ -5,14 +5,14 @@ const CONTACT = {
   whatsappNumber: "5511992698278",
   email: "contato@nilmariz.com.br",
   address: {
-    street: "Rua Virginopolis, 169 - Sacoma",
-    city: "Sao Paulo / SP",
+    street: "Rua Virginópolis, 169 - Sacomã",
+    city: "São Paulo / SP",
     zip: "CEP 04249-020",
   },
 };
 
 function whatsappLink(message) {
-  const defaultMessage = "Ola! Gostaria de solicitar uma cotacao de gerador.";
+  const defaultMessage = "Olá! Gostaria de solicitar uma cotação de gerador.";
   return `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(message || defaultMessage)}`;
 }
 
@@ -45,11 +45,11 @@ function icon(name) {
 }
 
 const NAV = [
-  { href: "index.html", label: "Inicio", page: "home" },
+  { href: "index.html", label: "Início", page: "home" },
   { href: "sobre.html", label: "Sobre", page: "sobre" },
-  { href: "geradores-gas.html", label: "Geradores a Gas", page: "gas" },
+  { href: "geradores-gas.html", label: "Geradores a Gás", page: "gas" },
   { href: "geradores-diesel.html", label: "Geradores a Diesel", page: "diesel" },
-  { href: "servicos.html", label: "Servicos", page: "servicos" },
+  { href: "servicos.html", label: "Serviços", page: "servicos" },
   { href: "contato.html", label: "Contato", page: "contato" },
 ];
 
@@ -64,10 +64,10 @@ function renderHeader(currentPage) {
         <div class="top-left">
           <a href="${CONTACT.phoneHref}" style="display:flex;align-items:center;gap:.4rem;">${icon("phone")} ${CONTACT.phone}</a>
           <div style="display:flex;align-items:center;gap:.45rem;">
-            <span class="ping-wrap"></span> Plantao 24 horas
+            <span class="ping-wrap"></span> Plantão 24 horas
           </div>
         </div>
-        <div class="top-right" style="opacity:.7;">Sao Paulo / SP</div>
+        <div class="top-right" style="opacity:.7;">São Paulo / SP</div>
       </div>
     </div>
     <header class="site-header">
@@ -77,13 +77,13 @@ function renderHeader(currentPage) {
         </a>
         <nav class="nav-links">${navDesktop}</nav>
         <div class="header-actions">
-          <a class="btn btn-energy desktop-quote-btn" href="${whatsappLink()}" target="_blank" rel="noreferrer">Solicitar cotacao</a>
+          <a class="btn btn-energy desktop-quote-btn" href="${whatsappLink()}" target="_blank" rel="noreferrer">Solicitar cotação</a>
           <button class="mobile-toggle" type="button" id="mobile-toggle" aria-label="Abrir menu">${icon("menu")}</button>
         </div>
       </div>
       <div class="container mobile-nav" id="mobile-nav">
         ${navMobile}
-        <a class="btn btn-energy" href="${whatsappLink()}" target="_blank" rel="noreferrer" style="margin-top:.5rem;width:100%;">Solicitar cotacao</a>
+        <a class="btn btn-energy" href="${whatsappLink()}" target="_blank" rel="noreferrer" style="margin-top:.5rem;width:100%;">Solicitar cotação</a>
       </div>
     </header>
   `;
@@ -98,7 +98,7 @@ function renderFooter() {
           <div class="footer-brand">
             ${logoImage}
           </div>
-          <p class="footer-intro">Energia para as coisas que movem sua vida. Mais de duas decadas em solucoes completas de geracao de energia para industria, comercio, hospitais, data centers e residencias de alto padrao.</p>
+          <p class="footer-intro">Energia para as coisas que movem sua vida. Mais de duas décadas em soluções completas de geração de energia para indústria, comércio, hospitais, data centers e residências de alto padrão.</p>
           <ul class="footer-contact">
             <li>${icon("phone")} <a href="${CONTACT.phoneHref}">${CONTACT.phone}</a></li>
             <li>${icon("whatsapp")} <a href="${whatsappLink()}" target="_blank" rel="noreferrer">WhatsApp ${CONTACT.whatsapp}</a></li>
@@ -109,23 +109,23 @@ function renderFooter() {
         <div>
           <div class="footer-title">Produtos</div>
           <ul class="footer-links">
-            <li><a href="geradores-gas.html">Geradores a Gas</a></li>
+            <li><a href="geradores-gas.html">Geradores a Gás</a></li>
             <li><a href="geradores-diesel.html">Geradores a Diesel</a></li>
-            <li><a href="servicos.html">Servicos e pecas</a></li>
+            <li><a href="servicos.html">Serviços e peças</a></li>
           </ul>
         </div>
         <div>
           <div class="footer-title">Empresa</div>
           <ul class="footer-links">
-            <li><a href="sobre.html">Sobre nos</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
             <li><a href="contato.html">Contato</a></li>
-            <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Plantao 24h</a></li>
+            <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h</a></li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
         <span>&copy; ${new Date().getFullYear()} Nilmariz Geradores. Todos os direitos reservados.</span>
-        <span>Venda - Instalacao - Manutencao - Plantao 24h</span>
+        <span>Venda - Instalação - Manutenção - Plantão 24h</span>
       </div>
     </footer>
   `;
