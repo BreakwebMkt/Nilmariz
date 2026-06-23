@@ -1,14 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#162b58"/>
-      <stop offset="100%" stop-color="#2a4f95"/>
+      <stop offset="0%" stop-color="#10306a"/>
+      <stop offset="100%" stop-color="#2f7bc7"/>
     </linearGradient>
-    <linearGradient id="bolt" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f8bf57"/>
-      <stop offset="100%" stop-color="#f08f1f"/>
+    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5cc1ff"/>
+      <stop offset="100%" stop-color="#1b5ca8"/>
+    </linearGradient>
+    <linearGradient id="slash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d7f1ff"/>
+      <stop offset="100%" stop-color="#7fc8f5"/>
     </linearGradient>
   </defs>
-  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
-  <path d="M35 10L17 34h13l-3 20 20-27H34z" fill="url(#bolt)"/>
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#bg)"/>
+  <circle cx="31" cy="29" r="16.5" fill="url(#orb)"/>
+  <path d="M18 24.5c6-9.5 22.5-13.2 30-7.5" fill="none" stroke="#a9ddff" stroke-linecap="round" stroke-width="2.4" opacity=".9"/>
+  <path d="M16.5 34.5c8.5 4.6 22.5 4.4 31.5-2" fill="none" stroke="#a9ddff" stroke-linecap="round" stroke-width="2.4" opacity=".72"/>
+  <path d="M23.2 14.5c-2.1 7.4-.4 18.1 7.1 28.2" fill="none" stroke="#8fd1fb" stroke-linecap="round" stroke-width="2.1" opacity=".65"/>
+  <path d="M24 40.5 30.2 22l6.1 11.3L43.7 19l-4.3 20.7-6.4-9.5-4.6 10.3Z" fill="#143d7c"/>
+  <path d="M18 49 32.2 29.4" fill="none" stroke="url(#slash)" stroke-linecap="round" stroke-width="4.4"/>
 </svg>

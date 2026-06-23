@@ -555,6 +555,14 @@ a {
   display: block;
 }
 
+.showcase-card-telecom img {
+  object-position: center top;
+}
+
+.showcase-card-guardian img {
+  object-position: center 58%;
+}
+
 .showcase-copy {
   padding: 1rem;
 }
