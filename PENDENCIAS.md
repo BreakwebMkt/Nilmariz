@@ -8,6 +8,7 @@ Registrado em 19/06/2026 para execução posterior nesta thread.
 - As demais imagens que precisam ser trocadas ainda serão enviadas depois nesta thread.
 - Atualização em 19/06/2026: as imagens de `Telecom` e `Hospitais` com a logo Nilmariz em branco já foram aplicadas no site.
 - Atualização em 19/06/2026: a imagem adicional enviada junto desse pacote foi aplicada na página `Geradores a Gás`, como contexto visual da linha Guardian.
+- Atualização em 25/06/2026: os ajustes de `28 anos`, `nova capa`, `Atuação multissegmento`, `Venda sem locação`, `Linha Guardian` e `Serviços` foram aplicados no site.
 
 ## 1. Home
 

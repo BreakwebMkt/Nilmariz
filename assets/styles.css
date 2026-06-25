@@ -373,7 +373,7 @@ a {
 
 .hero-image-card-focus {
   min-height: 0;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   align-self: center;
 }
 
@@ -1088,10 +1088,21 @@ a {
   border-top: 1px solid rgba(252, 252, 253, 0.1);
   padding: 1rem 0;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
   justify-content: space-between;
   font-size: 0.76rem;
   color: rgba(252, 252, 253, 0.6);
+}
+
+.footer-credit-link {
+  color: var(--energy);
+  font-weight: 700;
+}
+
+.footer-credit-link:hover {
+  color: #ffd27a;
 }
 
 .fab {

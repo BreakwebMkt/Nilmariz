@@ -1,4 +1,4 @@
-const CONTACT = {
+﻿const CONTACT = {
   phone: "(11) 2915-8919",
   phoneHref: "tel:+551129158919",
   whatsapp: "(11) 99269-8278",
@@ -98,7 +98,7 @@ function renderFooter() {
           <div class="footer-brand">
             ${logoImage}
           </div>
-          <p class="footer-intro">Energia para as coisas que movem sua vida. Mais de duas décadas em soluções completas de geração de energia para indústria, comércio, hospitais, data centers e residências de alto padrão.</p>
+          <p class="footer-intro">Energia para as coisas que movem sua vida. Há 28 anos em soluções completas de geração de energia para indústria, comércio, hospitais, data centers, condomínios e residências.</p>
           <ul class="footer-contact">
             <li>${icon("phone")} <a href="${CONTACT.phoneHref}">${CONTACT.phone}</a></li>
             <li>${icon("whatsapp")} <a href="${whatsappLink()}" target="_blank" rel="noreferrer">WhatsApp ${CONTACT.whatsapp}</a></li>
@@ -126,11 +126,11 @@ function renderFooter() {
       <div class="container footer-bottom">
         <span>&copy; ${new Date().getFullYear()} Nilmariz Geradores. Todos os direitos reservados.</span>
         <span>Venda - Instalação - Manutenção - Plantão 24h</span>
+        <span>Site desenvolvido por <a class="footer-credit-link" href="https://www.breakweb.com.br/" target="_blank" rel="noreferrer">Breakweb</a></span>
       </div>
     </footer>
   `;
 }
-
 function renderFab() {
   return `<a class="fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><span class="fab-icon">${icon("whatsapp")}</span></a>`;
 }
@@ -154,3 +154,4 @@ function mountLayout() {
 }
 
 document.addEventListener("DOMContentLoaded", mountLayout);
+
