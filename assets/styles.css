@@ -479,7 +479,7 @@ a {
 
 .product-media {
   position: relative;
-  height: 190px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: #e9edf5;
   display: flex;
@@ -490,9 +490,8 @@ a {
 .product-media img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  padding: 0.4rem;
   transition: transform 0.8s ease;
 }
 
@@ -630,7 +629,7 @@ a {
 
 .media-card-why {
   min-height: 0;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
 }
 
 .media-card-why img {
