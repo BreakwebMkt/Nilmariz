@@ -1033,6 +1033,7 @@ a {
 }
 
 .footer-logo-image {
+  filter: brightness(0) invert(1);
   width: auto;
   max-width: min(100%, 240px);
   height: 84px;
