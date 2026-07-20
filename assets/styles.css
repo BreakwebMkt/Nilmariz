@@ -511,7 +511,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 30%, rgba(31, 61, 122, 0.62) 100%);
+  background: linear-gradient(180deg, transparent 30%, rgba(31, 61, 122, 0.08) 100%);
 }
 
 .icon-badge {
