@@ -50,6 +50,7 @@ const NAV = [
   { href: "geradores-gas.html", label: "Geradores a Gás", page: "gas" },
   { href: "geradores-diesel.html", label: "Geradores a Diesel", page: "diesel" },
   { href: "servicos.html", label: "Serviços", page: "servicos" },
+  { href: "certificados.html", label: "Certificados", page: "certificados" },
   { href: "contato.html", label: "Contato", page: "contato" },
 ];
 
@@ -90,7 +91,7 @@ function renderHeader(currentPage) {
 }
 
 function renderFooter() {
-  const logoImage = '<img src="assets/images/logo-nilmariz.webp" alt="Nilmariz Geradores" class="footer-logo-image">';
+  const logoImage = '<img src="assets/images/logo-nilmariz.webp" alt="Nilmariz Geradores" class="footer-logo-image footer-logo-image-light">';
   return `
     <footer class="site-footer">
       <div class="container footer-main">
@@ -106,7 +107,7 @@ function renderFooter() {
             <li>${icon("map")} ${CONTACT.address.street} / ${CONTACT.address.city} - ${CONTACT.address.zip}</li>
           </ul>
         </div>
-        <div>
+        <div class="footer-nav-column">
           <div class="footer-title">Produtos</div>
           <ul class="footer-links">
             <li><a href="geradores-gas.html">Geradores a Gás</a></li>
@@ -114,10 +115,11 @@ function renderFooter() {
             <li><a href="servicos.html">Serviços e peças</a></li>
           </ul>
         </div>
-        <div>
+        <div class="footer-nav-column">
           <div class="footer-title">Empresa</div>
           <ul class="footer-links">
             <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
             <li><a href="contato.html">Contato</a></li>
             <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h</a></li>
           </ul>

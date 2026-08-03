@@ -447,6 +447,11 @@ a {
   gap: 1rem;
 }
 
+.solutions-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+}
+
 .grid-3 {
   margin-top: 2.4rem;
   display: grid;
@@ -469,6 +474,12 @@ a {
 .product-card {
   overflow: hidden;
   transition: 0.25s ease;
+}
+
+.solutions-grid .product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .product-card:hover {
@@ -503,6 +514,15 @@ a {
   object-position: center;
 }
 
+.product-media-acoustic {
+  background: #f5f7fc;
+}
+
+.product-media-acoustic img {
+  object-fit: contain;
+  padding: 1rem;
+}
+
 .product-card:hover .product-media img {
   transform: scale(1.02);
 }
@@ -532,6 +552,12 @@ a {
   padding: 1.15rem;
 }
 
+.solutions-grid .product-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 .product-body h3 {
   margin: 0;
   font-size: 1.12rem;
@@ -542,6 +568,19 @@ a {
   color: var(--muted-foreground);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.solutions-grid .product-body h3 {
+  font-size: 1rem;
+}
+
+.solutions-grid .product-body p {
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.solutions-grid .link-arrow {
+  margin-top: auto;
 }
 
 .showcase-grid {
@@ -564,6 +603,23 @@ a {
 
 .showcase-card-telecom img {
   object-position: center top;
+}
+
+.showcase-card-logistics img {
+  object-position: 84% center;
+}
+
+.showcase-card-temp-power img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.showcase-card-rooftop-service img {
+  object-position: 82% center;
+}
+
+.showcase-card-temp-service img {
+  object-position: 70% center;
 }
 
 .showcase-card-guardian img {
@@ -597,6 +653,10 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
+}
+
+.split > * {
+  min-width: 0;
 }
 
 .split-top {
@@ -1025,6 +1085,7 @@ a {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr;
   gap: 2rem;
+  align-items: start;
 }
 
 .footer-brand {
@@ -1039,6 +1100,10 @@ a {
   height: 84px;
   display: block;
   object-fit: contain;
+}
+
+.footer-logo-image-light {
+  filter: brightness(0) invert(1);
 }
 
 .footer-intro {
@@ -1079,6 +1144,10 @@ a {
   margin-bottom: 0.7rem;
 }
 
+.footer-nav-column {
+  padding-top: 1.35rem;
+}
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -1111,6 +1180,60 @@ a {
 
 .footer-credit-link:hover {
   color: #ffd27a;
+}
+
+.certificates-preview {
+  margin-top: 2rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(31, 61, 122, 0.06) 0%, rgba(247, 168, 40, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.certificate-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.certificate-card {
+  overflow: hidden;
+}
+
+.certificate-media {
+  background: #fff;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  min-height: 260px;
+}
+
+.certificate-media img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  display: block;
+}
+
+.certificate-copy {
+  padding: 1rem;
+}
+
+.certificate-copy h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.certificate-copy p {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 .fab {
@@ -1230,10 +1353,13 @@ svg.icon-whatsapp {
   .badge-overlay { margin-top: 1rem; right: 0; }
   .power-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .solutions-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .showcase-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .certificate-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-maint-grid { grid-template-columns: 1fr; }
+  .footer-nav-column { padding-top: 0; }
 }
 
 @media (max-width: 768px) {
@@ -1243,10 +1369,12 @@ svg.icon-whatsapp {
   .hero-grid { padding: 4.4rem 0; }
   .section-head { flex-direction: column; align-items: start; }
   .check-list.grid { grid-template-columns: 1fr; }
-  .grid-4, .grid-3, .grid-2, .power-grid, .showcase-grid { grid-template-columns: 1fr; }
+  .grid-4, .grid-3, .grid-2, .power-grid, .showcase-grid, .certificate-grid { grid-template-columns: 1fr; }
+  .solutions-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .cta-banner .container { flex-direction: column; align-items: flex-start; }
   .footer-bottom { flex-direction: column; }
+  .certificates-preview { flex-direction: column; align-items: flex-start; }
   .media-card { min-height: 0; }
   .media-card img { height: 100%; display: block; }
   .hero-image-card-focus {
