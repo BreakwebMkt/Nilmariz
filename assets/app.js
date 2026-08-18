@@ -95,39 +95,51 @@ function renderFooter() {
   return `
     <footer class="site-footer">
       <div class="container footer-main">
-        <div>
+        <div class="footer-brand-panel">
+          <div class="footer-certification" aria-label="Distribuidor autorizado Generac">
+            <span class="footer-certification-label">Distribuidor autorizado</span>
+            <span class="footer-certification-brand">Generac</span>
+          </div>
           <div class="footer-brand">
             ${logoImage}
           </div>
-          <p class="footer-intro">Energia para as coisas que movem sua vida. Há 28 anos em soluções completas de geração de energia para indústria, comércio, hospitais, data centers, condomínios e residências.</p>
+          <p class="footer-intro">Soluções completas em grupos geradores para operações que exigem continuidade, segurança e suporte técnico especializado.</p>
+          <div class="footer-actions">
+            <a class="btn btn-energy" href="${whatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h</a>
+            <a class="btn btn-outline" href="contato.html">Falar com especialista</a>
+          </div>
+        </div>
+        <div class="footer-nav-wrap">
+          <div class="footer-nav-column">
+            <div class="footer-title">Produtos</div>
+            <ul class="footer-links">
+              <li><a href="geradores-gas.html">Geradores a Gás</a></li>
+              <li><a href="geradores-diesel.html">Geradores a Diesel</a></li>
+              <li><a href="servicos.html">Serviços e peças</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-column">
+            <div class="footer-title">Empresa</div>
+            <ul class="footer-links">
+              <li><a href="sobre.html">Sobre nós</a></li>
+              <li><a href="certificados.html">Certificados</a></li>
+              <li><a href="contato.html">Contato</a></li>
+              <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Atendimento 24h</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-contact-card">
+          <div class="footer-title">Contato</div>
           <ul class="footer-contact">
             <li>${icon("phone")} <a href="${CONTACT.phoneHref}">${CONTACT.phone}</a></li>
             <li>${icon("whatsapp")} <a href="${whatsappLink()}" target="_blank" rel="noreferrer">WhatsApp ${CONTACT.whatsapp}</a></li>
             <li>${icon("mail")} <a href="mailto:${CONTACT.email}">${CONTACT.email}</a></li>
-            <li>${icon("map")} ${CONTACT.address.street} / ${CONTACT.address.city} - ${CONTACT.address.zip}</li>
-          </ul>
-        </div>
-        <div class="footer-nav-column">
-          <div class="footer-title">Produtos</div>
-          <ul class="footer-links">
-            <li><a href="geradores-gas.html">Geradores a Gás</a></li>
-            <li><a href="geradores-diesel.html">Geradores a Diesel</a></li>
-            <li><a href="servicos.html">Serviços e peças</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav-column">
-          <div class="footer-title">Empresa</div>
-          <ul class="footer-links">
-            <li><a href="sobre.html">Sobre nós</a></li>
-            <li><a href="certificados.html">Certificados</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h</a></li>
+            <li>${icon("map")} <span>${CONTACT.address.street}<br>${CONTACT.address.city} - ${CONTACT.address.zip}</span></li>
           </ul>
         </div>
       </div>
       <div class="container footer-bottom">
         <span>&copy; ${new Date().getFullYear()} Nilmariz Geradores. Todos os direitos reservados.</span>
-        <span>Venda - Instalação - Manutenção - Plantão 24h</span>
         <span>Site desenvolvido por <a class="footer-credit-link" href="https://www.breakweb.com.br/" target="_blank" rel="noreferrer">Breakweb</a></span>
       </div>
     </footer>
