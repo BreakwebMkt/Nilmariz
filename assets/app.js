@@ -91,7 +91,7 @@ function renderHeader(currentPage) {
 }
 
 function renderFooter() {
-  const logoImage = '<img src="assets/images/logo-nilmariz.webp" alt="Nilmariz Geradores" class="footer-logo-image footer-logo-image-light">';
+  const logoImage = '<img src="assets/images/logo-nilmariz-footer.png" alt="Nilmariz Grupos Geradores" class="footer-logo-image footer-logo-image-light">';
   return `
     <footer class="site-footer">
       <div class="container footer-main">
