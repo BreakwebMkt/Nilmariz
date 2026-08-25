@@ -98,7 +98,7 @@ function renderFooter() {
         <div class="footer-brand-panel">
           <div class="footer-certification" aria-label="Distribuidor autorizado Generac">
             <span class="footer-certification-label">Distribuidor autorizado</span>
-            <span class="footer-certification-brand">Generac</span>
+            <img src="assets/images/generac-assistencia-autorizada-white.png" alt="Generac Assistência Autorizada" class="footer-certification-logo">
           </div>
           <div class="footer-brand">
             ${logoImage}

@@ -429,6 +429,14 @@ a {
   font-weight: 700;
 }
 
+.hero-cert-strip-generac-logo {
+  width: min(100%, 230px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .floating-card {
   position: absolute;
   left: 1rem;
@@ -1191,6 +1199,14 @@ a {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
+}
+
+.footer-certification-logo {
+  width: min(100%, 210px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .footer-logo-image {
