@@ -414,14 +414,6 @@ a {
   gap: 0.2rem;
 }
 
-.hero-cert-strip-label {
-  color: var(--energy);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-
 .hero-cert-strip-brand {
   color: var(--primary-foreground);
   font-family: "Space Grotesk", sans-serif;
@@ -1184,14 +1176,6 @@ a {
   border: 1px solid rgba(252, 252, 253, 0.14);
   background: rgba(252, 252, 253, 0.08);
   box-shadow: 0 16px 36px rgba(5, 16, 41, 0.16);
-}
-
-.footer-certification-label {
-  color: var(--energy);
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-size: 0.68rem;
-  font-weight: 700;
 }
 
 .footer-certification-brand {
