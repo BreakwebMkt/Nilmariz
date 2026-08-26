@@ -386,6 +386,7 @@ a {
 .hero-cert-strip {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.15rem;
   border-radius: 18px;
@@ -412,6 +413,8 @@ a {
 .hero-cert-strip-copy {
   display: grid;
   gap: 0.2rem;
+  justify-items: end;
+  margin-left: auto;
 }
 
 .hero-cert-strip-brand {
@@ -422,7 +425,7 @@ a {
 }
 
 .hero-cert-strip-generac-logo {
-  width: min(100%, 230px);
+  width: min(100%, 178px);
   max-width: 100%;
   height: auto;
   display: block;
@@ -1159,12 +1162,15 @@ a {
 
 .footer-brand-panel {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.7rem;
+  justify-items: center;
+  text-align: center;
 }
 
 .footer-brand {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-certification {
@@ -1176,6 +1182,7 @@ a {
   border: 1px solid rgba(252, 252, 253, 0.14);
   background: rgba(252, 252, 253, 0.08);
   box-shadow: 0 16px 36px rgba(5, 16, 41, 0.16);
+  justify-self: center;
 }
 
 .footer-certification-brand {
@@ -1186,7 +1193,7 @@ a {
 }
 
 .footer-certification-logo {
-  width: min(100%, 210px);
+  width: min(100%, 190px);
   max-width: 100%;
   height: auto;
   display: block;
@@ -1217,6 +1224,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  justify-content: center;
 }
 
 .footer-contact {
@@ -1366,6 +1374,15 @@ a {
 
 .certificate-media-document img {
   max-height: 360px;
+}
+
+.certificate-media-logo {
+  min-height: 220px;
+  padding: 2rem;
+}
+
+.certificate-media-logo img {
+  max-height: 120px;
 }
 
 .certificate-copy {
@@ -1539,6 +1556,10 @@ svg.icon-whatsapp {
   .hero-cert-strip-divider {
     width: 100%;
     height: 1px;
+  }
+  .hero-cert-strip-copy {
+    justify-items: start;
+    margin-left: 0;
   }
   .section-head { flex-direction: column; align-items: start; }
   .check-list.grid { grid-template-columns: 1fr; }

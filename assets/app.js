@@ -92,15 +92,22 @@ function renderHeader(currentPage) {
 
 function renderFooter() {
   const logoImage = '<img src="assets/images/logo-nilmariz-footer.png" alt="Nilmariz Grupos Geradores" class="footer-logo-image footer-logo-image-light">';
+  const isServicesPage = document.body.dataset.page === "servicos";
+  const certificationLogo = isServicesPage
+    ? "assets/images/generac-assistencia-autorizada-white.png"
+    : "assets/images/generac-distribuidor-autorizado-white.png";
+  const certificationAlt = isServicesPage
+    ? "Generac Assistência Autorizada"
+    : "Generac Distribuidor Autorizado";
   return `
     <footer class="site-footer">
       <div class="container footer-main">
         <div class="footer-brand-panel">
-          <div class="footer-certification" aria-label="Distribuidor autorizado Generac">
-            <img src="assets/images/generac-assistencia-autorizada-white.png" alt="Generac Assistência Autorizada" class="footer-certification-logo">
-          </div>
           <div class="footer-brand">
             ${logoImage}
+          </div>
+          <div class="footer-certification" aria-label="${certificationAlt}">
+            <img src="${certificationLogo}" alt="${certificationAlt}" class="footer-certification-logo">
           </div>
           <p class="footer-intro">Soluções completas em grupos geradores para operações que exigem continuidade, segurança e suporte técnico especializado.</p>
           <div class="footer-actions">
