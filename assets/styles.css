@@ -386,8 +386,8 @@ a {
 .hero-cert-strip {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.15rem;
   padding: 1rem 1.15rem;
   border-radius: 18px;
   border: 1px solid rgba(252, 252, 253, 0.14);
@@ -413,8 +413,8 @@ a {
 .hero-cert-strip-copy {
   display: grid;
   gap: 0.2rem;
-  justify-items: end;
-  margin-left: auto;
+  justify-items: start;
+  margin-left: 0;
 }
 
 .hero-cert-strip-brand {
