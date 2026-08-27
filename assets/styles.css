@@ -389,13 +389,13 @@ a {
   align-items: center;
   justify-content: center;
   align-self: center;
-  width: min(100%, 320px);
-  gap: 0.35rem;
+  width: min(100%, 210px);
+  gap: 0.12rem;
   padding: 0.2rem 0 0;
 }
 
 .hero-cert-strip-logo {
-  width: min(100%, 104px);
+  width: min(100%, 118px);
   height: auto;
   object-fit: contain;
   filter: none;
@@ -424,7 +424,16 @@ a {
 }
 
 .hero-cert-strip-generac-logo {
-  width: min(100%, 190px);
+  width: min(100%, 138px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-top: -0.1rem;
+}
+
+.hero-cert-strip-combo {
+  width: clamp(124px, 16vw, 176px);
   max-width: 100%;
   height: auto;
   display: block;
