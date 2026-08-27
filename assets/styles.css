@@ -385,18 +385,17 @@ a {
 
 .hero-cert-strip {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.15rem;
-  padding: 1rem 1.15rem;
-  border-radius: 18px;
-  border: 1px solid rgba(252, 252, 253, 0.14);
-  background: rgba(252, 252, 253, 0.06);
-  box-shadow: var(--shadow-card);
+  align-self: center;
+  width: min(100%, 320px);
+  gap: 0.35rem;
+  padding: 0.2rem 0 0;
 }
 
 .hero-cert-strip-logo {
-  width: min(100%, 68px);
+  width: min(100%, 104px);
   height: auto;
   object-fit: contain;
   filter: none;
@@ -425,7 +424,7 @@ a {
 }
 
 .hero-cert-strip-generac-logo {
-  width: min(100%, 178px);
+  width: min(100%, 190px);
   max-width: 100%;
   height: auto;
   display: block;
@@ -681,6 +680,17 @@ a {
   object-position: center 58%;
 }
 
+.gas-highlight-media {
+  max-width: 900px;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  margin: 2rem auto 0;
+}
+
+.gas-highlight-media img {
+  object-position: center;
+}
+
 .showcase-copy {
   padding: 1rem;
 }
@@ -747,7 +757,8 @@ a {
 .media-card-install img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   display: block;
 }
 
@@ -1173,16 +1184,21 @@ a {
   justify-content: center;
 }
 
+.footer-nav-stack {
+  display: grid;
+  gap: 1.7rem;
+  align-content: start;
+}
+
 .footer-certification {
   display: inline-flex;
   flex-direction: column;
   gap: 0.22rem;
-  padding: 0.85rem 1rem;
-  border-radius: 14px;
-  border: 1px solid rgba(252, 252, 253, 0.14);
-  background: rgba(252, 252, 253, 0.08);
-  box-shadow: 0 16px 36px rgba(5, 16, 41, 0.16);
-  justify-self: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  justify-self: start;
 }
 
 .footer-certification-brand {
@@ -1193,7 +1209,7 @@ a {
 }
 
 .footer-certification-logo {
-  width: min(100%, 190px);
+  width: min(100%, 230px);
   max-width: 100%;
   height: auto;
   display: block;
@@ -1322,18 +1338,6 @@ a {
   color: #ffd27a;
 }
 
-.certificates-preview {
-  margin-top: 2rem;
-  padding: 1.4rem 1.5rem;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: linear-gradient(135deg, rgba(31, 61, 122, 0.06) 0%, rgba(247, 168, 40, 0.1) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
 .certificate-grid {
   margin-top: 2rem;
   display: grid;
@@ -1369,11 +1373,13 @@ a {
 }
 
 .certificate-media-document {
-  min-height: 320px;
+  min-height: 300px;
+  padding: 0.8rem;
 }
 
 .certificate-media-document img {
-  max-height: 360px;
+  max-height: 340px;
+  border-radius: 10px;
 }
 
 .certificate-media-logo {
@@ -1526,7 +1532,7 @@ svg.icon-whatsapp {
     aspect-ratio: 16 / 11;
   }
   .hero-cert-strip-logo {
-    width: min(100%, 60px);
+    width: min(100%, 96px);
   }
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1551,7 +1557,8 @@ svg.icon-whatsapp {
   .hero-grid { padding: 4.4rem 0; }
   .hero-cert-strip {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: min(100%, 280px);
   }
   .hero-cert-strip-divider {
     width: 100%;
@@ -1569,10 +1576,10 @@ svg.icon-whatsapp {
   .cta-banner .container { flex-direction: column; align-items: flex-start; }
   .footer-bottom { flex-direction: column; }
   .footer-nav-wrap { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-certification { justify-self: center; }
   .footer-actions { flex-direction: column; }
   .footer-actions .btn { width: 100%; }
   .footer-contact-card { padding: 1.2rem; }
-  .certificates-preview { flex-direction: column; align-items: flex-start; }
   .media-card { min-height: 0; }
   .media-card img { height: 100%; display: block; }
   .media-card-about {

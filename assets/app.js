@@ -106,32 +106,34 @@ function renderFooter() {
           <div class="footer-brand">
             ${logoImage}
           </div>
-          <div class="footer-certification" aria-label="${certificationAlt}">
-            <img src="${certificationLogo}" alt="${certificationAlt}" class="footer-certification-logo">
-          </div>
           <p class="footer-intro">Soluções completas em grupos geradores para operações que exigem continuidade, segurança e suporte técnico especializado.</p>
           <div class="footer-actions">
             <a class="btn btn-energy" href="${whatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h</a>
             <a class="btn btn-outline" href="contato.html">Falar com especialista</a>
           </div>
         </div>
-        <div class="footer-nav-wrap">
-          <div class="footer-nav-column">
-            <div class="footer-title">Produtos</div>
-            <ul class="footer-links">
-              <li><a href="geradores-gas.html">Geradores a Gás</a></li>
-              <li><a href="geradores-diesel.html">Geradores a Diesel</a></li>
-              <li><a href="servicos.html">Serviços e peças</a></li>
-            </ul>
+        <div class="footer-nav-stack">
+          <div class="footer-nav-wrap">
+            <div class="footer-nav-column">
+              <div class="footer-title">Produtos</div>
+              <ul class="footer-links">
+                <li><a href="geradores-gas.html">Geradores a Gás</a></li>
+                <li><a href="geradores-diesel.html">Geradores a Diesel</a></li>
+                <li><a href="servicos.html">Serviços e peças</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-column">
+              <div class="footer-title">Empresa</div>
+              <ul class="footer-links">
+                <li><a href="sobre.html">Sobre nós</a></li>
+                <li><a href="certificados.html">Certificados</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Atendimento 24h</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="footer-nav-column">
-            <div class="footer-title">Empresa</div>
-            <ul class="footer-links">
-              <li><a href="sobre.html">Sobre nós</a></li>
-              <li><a href="certificados.html">Certificados</a></li>
-              <li><a href="contato.html">Contato</a></li>
-              <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Atendimento 24h</a></li>
-            </ul>
+          <div class="footer-certification" aria-label="${certificationAlt}">
+            <img src="${certificationLogo}" alt="${certificationAlt}" class="footer-certification-logo">
           </div>
         </div>
         <div class="footer-contact-card">
