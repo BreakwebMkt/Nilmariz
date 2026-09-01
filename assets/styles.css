@@ -773,22 +773,22 @@ a {
 
 .media-card-maintenance {
   min-height: 0;
-  width: min(100%, 720px);
-  aspect-ratio: 16 / 10;
-  background: var(--card);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.1rem;
+  width: min(100%, 860px);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  overflow: visible;
+  padding: 0;
 }
 
 .media-card-maintenance img {
   width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: none;
   object-fit: contain;
   object-position: center;
   display: block;
+  mix-blend-mode: multiply;
 }
 
 .media-card-why {
