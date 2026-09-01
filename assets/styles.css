@@ -799,7 +799,7 @@ a {
 
 .badge-overlay {
   margin-left: auto;
-  margin-top: -70px;
+  margin-top: 1rem;
   max-width: 260px;
   background: var(--primary);
   color: var(--primary-foreground);
@@ -807,7 +807,7 @@ a {
   padding: 1rem;
   box-shadow: var(--shadow-elevated);
   position: relative;
-  right: -20px;
+  right: 0;
 }
 
 .badge-overlay strong {
@@ -1252,6 +1252,11 @@ a {
   justify-content: center;
 }
 
+.footer-emergency-btn {
+  gap: 0.5rem;
+  box-shadow: var(--shadow-glow);
+}
+
 .footer-contact {
   list-style: none;
   padding: 0;
@@ -1427,11 +1432,55 @@ a {
   color: var(--primary-light);
 }
 
-.fab {
+.fab-group {
   position: fixed;
   right: 1.25rem;
   bottom: 1.25rem;
   z-index: 55;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.urgent-fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+  padding: 0.65rem 0.86rem;
+  border-radius: 999px;
+  background: var(--gradient-energy);
+  color: var(--energy-foreground);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  box-shadow: 0 16px 34px -14px rgba(247, 168, 40, 0.82);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.urgent-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 42px -16px rgba(247, 168, 40, 0.94);
+}
+
+.urgent-fab strong,
+.urgent-fab small {
+  display: block;
+  line-height: 1.05;
+}
+
+.urgent-fab strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
+}
+
+.urgent-fab small {
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  opacity: 0.78;
+}
+
+.fab {
+  position: relative;
   width: 56px;
   height: 56px;
   border-radius: 999px;
@@ -1547,7 +1596,6 @@ svg.icon-whatsapp {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .page-hero-media { display: none; }
-  .badge-overlay { margin-top: 1rem; right: 0; }
   .power-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .solutions-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -1588,6 +1636,8 @@ svg.icon-whatsapp {
   .footer-certification { justify-self: center; }
   .footer-actions { flex-direction: column; }
   .footer-actions .btn { width: 100%; }
+  .fab-group { right: 1rem; bottom: 1rem; }
+  .urgent-fab small { display: none; }
   .footer-contact-card { padding: 1.2rem; }
   .media-card { min-height: 0; }
   .media-card img { height: 100%; display: block; }

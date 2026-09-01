@@ -108,7 +108,7 @@ function renderFooter() {
           </div>
           <p class="footer-intro">Soluções completas em grupos geradores para operações que exigem continuidade, segurança e suporte técnico especializado.</p>
           <div class="footer-actions">
-            <a class="btn btn-energy" href="${whatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h</a>
+            <a class="btn btn-energy footer-emergency-btn" href="${whatsappLink()}" target="_blank" rel="noreferrer"><span class="ping-wrap"></span> Plantão 24h</a>
             <a class="btn btn-outline" href="contato.html">Falar com especialista</a>
           </div>
         </div>
@@ -154,7 +154,15 @@ function renderFooter() {
   `;
 }
 function renderFab() {
-  return `<a class="fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><span class="fab-icon">${icon("whatsapp")}</span></a>`;
+  return `
+    <div class="fab-group" aria-label="Atalhos de atendimento">
+      <a class="urgent-fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir plantão 24 horas no WhatsApp">
+        <span class="ping-wrap"></span>
+        <span><strong>Plantão 24h</strong><small>Atendimento imediato</small></span>
+      </a>
+      <a class="fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><span class="fab-icon">${icon("whatsapp")}</span></a>
+    </div>
+  `;
 }
 
 function mountLayout() {
