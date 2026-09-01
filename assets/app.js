@@ -155,13 +155,11 @@ function renderFooter() {
 }
 function renderFab() {
   return `
-    <div class="fab-group" aria-label="Atalhos de atendimento">
-      <a class="urgent-fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir plantão 24 horas no WhatsApp">
-        <span class="ping-wrap"></span>
-        <span><strong>Plantão 24h</strong><small>Atendimento imediato</small></span>
-      </a>
-      <a class="fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><span class="fab-icon">${icon("whatsapp")}</span></a>
+    <div class="urgent-fab" role="note" aria-label="Plantão 24 horas com atendimento imediato">
+      <span class="ping-wrap"></span>
+      <span><strong>Plantão 24h</strong><small>Atendimento imediato</small></span>
     </div>
+    <a class="fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><span class="fab-icon">${icon("whatsapp")}</span></a>
   `;
 }
 

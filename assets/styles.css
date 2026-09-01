@@ -773,13 +773,20 @@ a {
 
 .media-card-maintenance {
   min-height: 0;
-  aspect-ratio: 16 / 9;
+  width: min(100%, 720px);
+  aspect-ratio: 16 / 10;
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem;
 }
 
 .media-card-maintenance img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
   object-position: center;
   display: block;
 }
@@ -1098,6 +1105,12 @@ a {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 1.4rem;
+}
+
+.services-maint-media-wrap {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-card {
@@ -1432,19 +1445,16 @@ a {
   color: var(--primary-light);
 }
 
-.fab-group {
+.urgent-fab,
+.fab {
   position: fixed;
-  right: 1.25rem;
   bottom: 1.25rem;
   z-index: 55;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.75rem;
 }
 
 .urgent-fab {
-  display: inline-flex;
+  left: 1.25rem;
+  display: flex;
   align-items: center;
   gap: 0.58rem;
   padding: 0.65rem 0.86rem;
@@ -1453,6 +1463,8 @@ a {
   color: var(--energy-foreground);
   border: 1px solid rgba(255, 255, 255, 0.52);
   box-shadow: 0 16px 34px -14px rgba(247, 168, 40, 0.82);
+  cursor: default;
+  user-select: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1480,7 +1492,7 @@ a {
 }
 
 .fab {
-  position: relative;
+  right: 1.25rem;
   width: 56px;
   height: 56px;
   border-radius: 999px;
@@ -1636,11 +1648,13 @@ svg.icon-whatsapp {
   .footer-certification { justify-self: center; }
   .footer-actions { flex-direction: column; }
   .footer-actions .btn { width: 100%; }
-  .fab-group { right: 1rem; bottom: 1rem; }
+  .urgent-fab { left: 1rem; bottom: 1rem; }
+  .fab { right: 1rem; bottom: 1rem; }
   .urgent-fab small { display: none; }
   .footer-contact-card { padding: 1.2rem; }
   .media-card { min-height: 0; }
   .media-card img { height: 100%; display: block; }
+  .media-card-maintenance img { height: auto; }
   .media-card-about {
     aspect-ratio: 3 / 2;
   }
