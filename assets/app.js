@@ -1,9 +1,14 @@
 ﻿const CONTACT = {
   phone: "(11) 2915-8919",
   phoneHref: "tel:+551129158919",
+  emergencyWhatsappNumber: "551129158919",
   whatsapp: "(11) 99269-8278",
   whatsappNumber: "5511992698278",
   email: "contato@nilmariz.com.br",
+  social: {
+    instagram: "https://www.instagram.com/nilmariz/",
+    facebook: "https://www.facebook.com/nilmariz/",
+  },
   address: {
     street: "Rua Virginópolis, 169 - Sacomã",
     city: "São Paulo / SP",
@@ -16,6 +21,11 @@ function whatsappLink(message) {
   return `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(message || defaultMessage)}`;
 }
 
+function emergencyWhatsappLink(message) {
+  const defaultMessage = "Olá! Preciso de atendimento do plantão 24h.";
+  return `https://wa.me/${CONTACT.emergencyWhatsappNumber}?text=${encodeURIComponent(message || defaultMessage)}`;
+}
+
 function icon(name) {
   const icons = {
     zap: `<svg class="icon" viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>`,
@@ -24,6 +34,8 @@ function icon(name) {
     phone: `<svg class="icon" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6.5 6.5l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6A2 2 0 0 1 22 16.9z"/></svg>`,
     message: `<svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.1-5A8.5 8.5 0 1 1 21 11.5z"/></svg>`,
     whatsapp: `<svg class="icon-whatsapp" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.52 3.48A11.8 11.8 0 0 0 12.1 0C5.62 0 .35 5.27.35 11.75c0 2.07.54 4.08 1.56 5.85L0 24l6.58-1.86a11.7 11.7 0 0 0 5.52 1.4h.01c6.48 0 11.75-5.27 11.75-11.75 0-3.14-1.22-6.08-3.34-8.31zM12.1 21.55h-.01a9.7 9.7 0 0 1-4.96-1.36l-.35-.21-3.9 1.1 1.04-3.79-.23-.39a9.75 9.75 0 1 1 8.4 4.65z"/><path fill="currentColor" d="M17.63 14.47c-.3-.15-1.76-.87-2.03-.97-.27-.1-.46-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.37-1.47-.88-.78-1.47-1.74-1.64-2.04-.17-.3-.02-.46.13-.61.13-.12.3-.32.45-.49.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.51.07-.78.37-.27.3-1.03 1.01-1.03 2.46 0 1.45 1.05 2.86 1.2 3.06.15.2 2.05 3.12 4.96 4.37.69.3 1.23.47 1.65.6.7.22 1.33.19 1.83.12.55-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.08-.13-.27-.2-.57-.35z"/></svg>`,
+    instagram: `<svg class="icon-social" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>`,
+    facebook: `<svg class="icon-social" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.2 8.2V6.7c0-.7.4-1.1 1.2-1.1h1.5V3h-2.2c-2.5 0-3.8 1.5-3.8 3.7v1.5H8.7V11h2.2v10h3.3V11h2.2l.4-2.8z"/></svg>`,
     mail: `<svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>`,
     map: `<svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>`,
     check: `<svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>`,
@@ -64,9 +76,9 @@ function renderHeader(currentPage) {
       <div class="container">
         <div class="top-left">
           <a href="${CONTACT.phoneHref}" style="display:flex;align-items:center;gap:.4rem;">${icon("phone")} ${CONTACT.phone}</a>
-          <div style="display:flex;align-items:center;gap:.45rem;">
+          <a href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:.45rem;">
             <span class="ping-wrap"></span> Plantão 24 horas
-          </div>
+          </a>
         </div>
         <div class="top-right" style="opacity:.7;">São Paulo / SP</div>
       </div>
@@ -108,7 +120,7 @@ function renderFooter() {
           </div>
           <p class="footer-intro">Soluções completas em grupos geradores para operações que exigem continuidade, segurança e suporte técnico especializado.</p>
           <div class="footer-actions">
-            <a class="btn btn-energy footer-emergency-btn" href="${whatsappLink()}" target="_blank" rel="noreferrer"><span class="ping-wrap"></span> Plantão 24h</a>
+            <a class="btn btn-energy footer-emergency-btn" href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer"><span class="ping-wrap"></span> Plantão 24h</a>
             <a class="btn btn-outline" href="contato.html">Falar com especialista</a>
           </div>
         </div>
@@ -128,7 +140,7 @@ function renderFooter() {
                 <li><a href="sobre.html">Sobre nós</a></li>
                 <li><a href="certificados.html">Certificados</a></li>
                 <li><a href="contato.html">Contato</a></li>
-                <li><a href="${whatsappLink()}" target="_blank" rel="noreferrer">Atendimento 24h</a></li>
+                <li><a href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer">Atendimento 24h</a></li>
               </ul>
             </div>
           </div>
@@ -139,8 +151,10 @@ function renderFooter() {
         <div class="footer-contact-card">
           <div class="footer-title">Contato</div>
           <ul class="footer-contact">
-            <li>${icon("phone")} <a href="${CONTACT.phoneHref}">${CONTACT.phone}</a></li>
+            <li>${icon("phone")} <a href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h ${CONTACT.phone}</a></li>
             <li>${icon("whatsapp")} <a href="${whatsappLink()}" target="_blank" rel="noreferrer">WhatsApp ${CONTACT.whatsapp}</a></li>
+            <li>${icon("instagram")} <a href="${CONTACT.social.instagram}" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li>${icon("facebook")} <a href="${CONTACT.social.facebook}" target="_blank" rel="noreferrer">Facebook</a></li>
             <li>${icon("mail")} <a href="mailto:${CONTACT.email}">${CONTACT.email}</a></li>
             <li>${icon("map")} <span>${CONTACT.address.street}<br>${CONTACT.address.city} - ${CONTACT.address.zip}</span></li>
           </ul>
@@ -155,10 +169,10 @@ function renderFooter() {
 }
 function renderFab() {
   return `
-    <div class="urgent-fab" role="note" aria-label="Plantão 24 horas com atendimento imediato">
+    <a class="urgent-fab" href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp do Plantão 24 horas">
       <span class="ping-wrap"></span>
       <span><strong>Plantão 24h</strong><small>Atendimento imediato</small></span>
-    </div>
+    </a>
     <a class="fab" href="${whatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><span class="fab-icon">${icon("whatsapp")}</span></a>
   `;
 }
