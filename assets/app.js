@@ -59,9 +59,9 @@ function icon(name) {
 const NAV = [
   { href: "index.html", label: "Início", page: "home" },
   { href: "sobre.html", label: "Sobre", page: "sobre" },
+  { href: "servicos.html", label: "Serviços", page: "servicos" },
   { href: "geradores-gas.html", label: "Geradores a Gás", page: "gas" },
   { href: "geradores-diesel.html", label: "Geradores a Diesel", page: "diesel" },
-  { href: "servicos.html", label: "Serviços", page: "servicos" },
   { href: "certificados.html", label: "Certificados", page: "certificados" },
   { href: "contato.html", label: "Contato", page: "contato" },
 ];
