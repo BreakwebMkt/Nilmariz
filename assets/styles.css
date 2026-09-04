@@ -1342,9 +1342,17 @@ a {
   justify-content: center;
 }
 
-.footer-emergency-btn {
-  gap: 0.5rem;
-  box-shadow: var(--shadow-glow);
+.footer-specialist-btn {
+  min-width: 210px;
+  justify-content: center;
+  border-color: rgba(252, 252, 253, 0.44);
+  background: rgba(252, 252, 253, 0.08);
+  box-shadow: 0 16px 34px -22px rgba(252, 252, 253, 0.42);
+}
+
+.footer-specialist-btn:hover {
+  background: rgba(252, 252, 253, 0.15);
+  border-color: rgba(252, 252, 253, 0.64);
 }
 
 .footer-contact {

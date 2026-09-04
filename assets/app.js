@@ -1,7 +1,6 @@
 ﻿const CONTACT = {
   phone: "(11) 2915-8919",
   phoneHref: "tel:+551129158919",
-  emergencyWhatsappNumber: "551129158919",
   whatsapp: "(11) 99269-8278",
   whatsappNumber: "5511992698278",
   email: "contato@nilmariz.com.br",
@@ -19,11 +18,6 @@
 function whatsappLink(message) {
   const defaultMessage = "Olá! Gostaria de solicitar uma cotação de gerador.";
   return `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(message || defaultMessage)}`;
-}
-
-function emergencyWhatsappLink(message) {
-  const defaultMessage = "Olá! Preciso de atendimento do plantão 24h.";
-  return `https://wa.me/${CONTACT.emergencyWhatsappNumber}?text=${encodeURIComponent(message || defaultMessage)}`;
 }
 
 function icon(name) {
@@ -76,7 +70,7 @@ function renderHeader(currentPage) {
       <div class="container">
         <div class="top-left">
           <a href="${CONTACT.phoneHref}" style="display:flex;align-items:center;gap:.4rem;">${icon("phone")} ${CONTACT.phone}</a>
-          <a href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer" style="display:flex;align-items:center;gap:.45rem;">
+          <a href="${CONTACT.phoneHref}" style="display:flex;align-items:center;gap:.45rem;">
             <span class="ping-wrap"></span> Plantão 24 horas
           </a>
         </div>
@@ -120,8 +114,7 @@ function renderFooter() {
           </div>
           <p class="footer-intro">Soluções completas em grupos geradores para operações que exigem continuidade, segurança e suporte técnico especializado.</p>
           <div class="footer-actions">
-            <a class="btn btn-energy footer-emergency-btn" href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer"><span class="ping-wrap"></span> Plantão 24h</a>
-            <a class="btn btn-outline" href="contato.html">Falar com especialista</a>
+            <a class="btn btn-outline footer-specialist-btn" href="contato.html">Falar com especialista</a>
           </div>
         </div>
         <div class="footer-nav-stack">
@@ -140,7 +133,7 @@ function renderFooter() {
                 <li><a href="sobre.html">Sobre nós</a></li>
                 <li><a href="certificados.html">Certificados</a></li>
                 <li><a href="contato.html">Contato</a></li>
-                <li><a href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer">Atendimento 24h</a></li>
+                <li><a href="${CONTACT.phoneHref}">Atendimento 24h</a></li>
               </ul>
             </div>
           </div>
@@ -151,7 +144,7 @@ function renderFooter() {
         <div class="footer-contact-card">
           <div class="footer-title">Contato</div>
           <ul class="footer-contact">
-            <li>${icon("phone")} <a href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer">Plantão 24h ${CONTACT.phone}</a></li>
+            <li>${icon("phone")} <a href="${CONTACT.phoneHref}">Plantão 24h ${CONTACT.phone}</a></li>
             <li>${icon("whatsapp")} <a href="${whatsappLink()}" target="_blank" rel="noreferrer">WhatsApp ${CONTACT.whatsapp}</a></li>
             <li>${icon("instagram")} <a href="${CONTACT.social.instagram}" target="_blank" rel="noreferrer">Instagram</a></li>
             <li>${icon("facebook")} <a href="${CONTACT.social.facebook}" target="_blank" rel="noreferrer">Facebook</a></li>
@@ -169,7 +162,7 @@ function renderFooter() {
 }
 function renderFab() {
   return `
-    <a class="urgent-fab" href="${emergencyWhatsappLink()}" target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp do Plantão 24 horas">
+    <a class="urgent-fab" href="${CONTACT.phoneHref}" aria-label="Ligar para o Plantão 24 horas">
       <span class="ping-wrap"></span>
       <span><strong>Plantão 24h</strong><small>Atendimento imediato</small></span>
     </a>
